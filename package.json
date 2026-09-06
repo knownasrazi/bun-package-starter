@@ -1,27 +1,20 @@
 {
   "name": "bun-package-starter",
-  "version": "1.0.0",
-  "description": "Scaffold a publishable Bun + TypeScript npm package with one command. tsup, Biome and CI included.",
+  "version": "0.1.0",
+  "description": "A tiny, type-safe npm package scaffolded from the bun-package-starter GitHub template. tsup + Biome + Bun.",
   "keywords": [
     "bun",
     "typescript",
-    "package",
-    "starter",
-    "scaffold",
-    "boilerplate",
-    "create",
-    "tsup",
-    "npm"
+    "library",
+    "package"
   ],
   "license": "MIT",
+  "private": true,
   "author": {
     "name": "Razi",
     "url": "https://github.com/knownasrazi"
   },
   "type": "module",
-  "bin": {
-    "create-bun-package": "./dist/cli.js"
-  },
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -38,8 +31,7 @@
     }
   },
   "files": [
-    "dist",
-    "template"
+    "dist"
   ],
   "engines": {
     "node": ">=18",
@@ -56,7 +48,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.5.7",
-    "@types/bun": "^1.2.0",
+    "@types/bun": "^1.2.2",
     "tsup": "^8.5.1",
     "typescript": "^5.9.0"
   }

@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: 22
           registry-url: https://registry.npmjs.org
-      - run: bun install --frozen-lockfile
+      - run: bun install
       - run: bun run build
       - run: bun test
       - name: Publish to npm
