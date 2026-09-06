@@ -1,0 +1,54 @@
+{
+  "name": "<PACKAGE_NAME>",
+  "version": "0.1.0",
+  "description": "A tiny, type-safe package scaffolded with bun-package-starter.",
+  "keywords": [
+    "bun",
+    "typescript",
+    "library",
+    "package"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "You",
+    "url": "https://github.com/your-name"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18",
+    "bun": ">=1.0"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check --diagnostic-level=warn .",
+    "format": "biome format --write .",
+    "release": "bun run lint && bun run typecheck && bun run build && bun test"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.7",
+    "@types/bun": "^1.2.2",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.0"
+  }
+}
